@@ -2,11 +2,11 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 class MultidimensionalArrays {
-    static BigDecimal multMain = BigDecimal.valueOf(1);
-    static BigDecimal multCollateral = BigDecimal.valueOf(1);
+     static BigDecimal multMain = BigDecimal.valueOf(1);
+     static BigDecimal multCollateral = BigDecimal.valueOf(1);
 
 
-    static String SumAndMultDiagonal() {
+      static String SumAndMultDiagonal() {
         String mess = "";
         MyArray arr1 = new MyArray(8, 8, 1, 99);
         int[][] array = arr1.arrayTwoDimensional;
@@ -42,7 +42,7 @@ class MultidimensionalArrays {
 
     }
 
-    static String FindingTheMaximumElementInTwoDimensionalArray() {
+     static String FindingTheMaximumElementInTwoDimensionalArray() {
         String mess="";
         MyArray arr1 = new MyArray(8, 8, -99, 99);
         int[][] array = arr1.arrayTwoDimensional;
@@ -70,7 +70,7 @@ class MultidimensionalArrays {
 
     }
 
-    static String TheLineWithTheLargestProduct() {
+     static String TheLineWithTheLargestProduct() {
         String mess="";
         MyArray arr1 = new MyArray(8, 8, -10, 10);
         int[][] array = arr1.arrayTwoDimensional;
@@ -103,7 +103,7 @@ class MultidimensionalArrays {
 
     }
 
-    static String SortingArrayLines() {
+     static String SortingArrayLines() {
         String mess="";
         MyArray arr1 = new MyArray(8, 5, 0, 100);
         int[][] array = arr1.arrayTwoDimensional;

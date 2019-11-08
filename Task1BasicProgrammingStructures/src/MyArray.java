@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class MyArray {
 
@@ -11,6 +12,22 @@ public class MyArray {
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) Math.round((leftBorder + Math.random() * (rightBorder - leftBorder)));
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyArray myArray = (MyArray) o;
+        return Arrays.equals(array, myArray.array) &&
+                Arrays.equals(arrayTwoDimensional, myArray.arrayTwoDimensional);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Arrays.hashCode(array);
+        result = 31 * result + Arrays.hashCode(arrayTwoDimensional);
+        return result;
     }
 
     MyArray(int sizeI, int sizeJ, int leftBorder, int rightBorder) {

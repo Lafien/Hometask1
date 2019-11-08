@@ -6,7 +6,7 @@ import javax.swing.*;
 public class MainWin extends JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
     private JTextArea jta = new JTextArea();
-    private MainWin() {
+     MainWin() {
 
         Container c = getContentPane();
         c.setLayout(new BoxLayout(c, BoxLayout.Y_AXIS));
@@ -101,7 +101,6 @@ public class MainWin extends JFrame implements ActionListener {
     public static void main(String args[]) {
         new MainWin();
     }
-
 }
 
 

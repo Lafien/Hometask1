@@ -5,6 +5,24 @@ class SortArray {
     int[] arr2;
     int[] arr3;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SortArray sortArray = (SortArray) o;
+        return Arrays.equals(arr1, sortArray.arr1) &&
+                Arrays.equals(arr2, sortArray.arr2) &&
+                Arrays.equals(arr3, sortArray.arr3);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Arrays.hashCode(arr1);
+        result = 31 * result + Arrays.hashCode(arr2);
+        result = 31 * result + Arrays.hashCode(arr3);
+        return result;
+    }
+
     SortArray(int n) {
         MyArray array = new MyArray(n, -1000, 1000);
         this.arr1 = array.array;

@@ -1,8 +1,22 @@
 import java.math.BigDecimal;
+import java.util.Objects;
 
 class Factorial {
     private static BigDecimal integer = BigDecimal.valueOf(1);
     int n;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Factorial factorial = (Factorial) o;
+        return n == factorial.n;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(n);
+    }
 
     Factorial(int n) {
         this.n = n;
