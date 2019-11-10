@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74ca0ccf-d8c6-4988-99a3-0804478e69f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task2OOP1/OOP_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task2OOP1/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task1BasicProgrammingStructures/Factorial.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task1BasicProgrammingStructures/Factorial.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task1BasicProgrammingStructures/MainWin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task1BasicProgrammingStructures/MainWin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task1BasicProgrammingStructures/MyArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task1BasicProgrammingStructures/MyArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Task1BasicProgrammingStructures/SortArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task1BasicProgrammingStructures/SortArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factorial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainWin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainWin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultidimensionalArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultidimensionalArrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SortArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortArray.java" afterDir="false" />
-    </list>
+    <list default="true" id="74ca0ccf-d8c6-4988-99a3-0804478e69f6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572626247753</updated>
       <workItem from="1573232293243" duration="760000" />
+      <workItem from="1573233509262" duration="46000" />
     </task>
     <servers />
   </component>
@@ -93,7 +80,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
