@@ -55,10 +55,17 @@ public class MyLinkedList<E> implements ILinkedList<E> {
 
     @Override
     public void clear() {
+        MyLinkedList.Node next;
+        for(MyLinkedList.Node x = this.firstNode; x != null; x = next) {
+            next = x.nextElement;
+            x.setElement(null);
+            x.setNextElement(null);
+            x.setPrevElement(null);
+        }
+
         firstNode.setElement(null);
         lastNode.setElement(null);
         size = 0;
-
     }
 
     @Override
