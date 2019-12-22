@@ -1,25 +1,42 @@
 package com.nefedov.model;
 
+import com.nefedov.annotation.*;
+
+
 public class User {
+
+    @LastNameConstraint
     private String lastName;
+
+    @FirstNameConstraint
     private String firstName;
+
+    @SecondNameConstraint
     private String secondName;
-    private int age;
+
+    @AgeConstraint
+    private Integer age;
+
+    @SalaryConstraint
     private int salary;
+
+    @EmailConstraint
     private String email;
-    private String PlaceOfWork;
+
+    @PlaceOfWorkConstraint
+    private String placeOfWork;
 
     public User() {
     }
 
-    public User(String lastName, String firstName, String secondName, int age, int salary, String email, String placeOfWork) {
+    public User(String lastName, String firstName, String secondName, Integer age, int salary, String email, String placeOfWork) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.secondName = secondName;
         this.age = age;
         this.salary = salary;
         this.email = email;
-        PlaceOfWork = placeOfWork;
+        this.placeOfWork = placeOfWork;
     }
 
     public String getLastName() {
@@ -46,11 +63,11 @@ public class User {
         this.secondName = secondName;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -71,10 +88,10 @@ public class User {
     }
 
     public String getPlaceOfWork() {
-        return PlaceOfWork;
+        return placeOfWork;
     }
 
     public void setPlaceOfWork(String placeOfWork) {
-        this.PlaceOfWork = placeOfWork;
+        this.placeOfWork = placeOfWork;
     }
 }

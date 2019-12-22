@@ -9,18 +9,52 @@
 <h1>User</h1>
 <form action="#" th:action="@{/user}"th:object ="${user}" method="post">
     <p>Last Name: <input type="text" th:field = "*{lastName}">
-    First Name: <input type="text" th:field = "*{firstName}">
-    Second Name: <input type="text" th:field = "*{secondName}"/></p>
+    <td>
+        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">..</span>
+    </td>
+    </p>
+
+    <p>First Name: <input type="text" th:field = "*{firstName}">
+    <td>
+        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">..</span>
+    </td>
+    </p>
+
+    <p>Second Name: <input type="text" th:field = "*{secondName}"/>
+    <td>
+        <span th:if="${#fields.hasErrors('secondName')}" th:errors="*{secondName}">..</span>
+    </td>
+    </p>
+
     <p>Age: <input type="number" th:field = "*{age}"/>
-    Salary: <input type="number" th:field = "*{salary}"/>
-    Email: <input type="text" th:field = "*{email}"/></p>
-    <p>Place of work: <input type="text" th:field = "*{PlaceOfWork}"/></p>
+    <td>
+        <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}">..</span>
+    </td>
+    </p>
+
+    <p>Salary: <input type="number" th:field = "*{salary}"/>
+    <td>
+        <span th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}">..</span>
+    </td>
+    </p>
+
+    <p>Email: <input type="text" th:field = "*{email}"/>
+    <td>
+        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">..</span>
+    </td>
+    </p>
+
+    <p>Place of work: <input type="text" th:field = "*{placeOfWork}"/>
+    <td>
+        <span th:if="${#fields.hasErrors('placeOfWork')}" th:errors="*{placeOfWork}">..</span>
+    </td>
+    </p>
+
     <p>
         <button type="submit" name="action" value="save">Create</button>
         <!--<input type="submit" value="Submit"/>-->
         <input type="reset" value="Reset"/>
     </p>
-
 
 </form>
 

@@ -1,11 +1,14 @@
 package com.nefedov.controller;
 
 import com.nefedov.model.User;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -24,19 +27,27 @@ public class UserController {
     }
 
 
+
     @RequestMapping(value="/user", method= RequestMethod.POST, params="action=save")
-    public String save(@ModelAttribute User user, HttpServletResponse response) throws IOException {
+    public String save(@Valid User user, BindingResult bindingResult) throws IOException {
+        if (bindingResult.hasErrors()) {
 
-        String str = user.getLastName() + " | " + user.getFirstName() + " | " + user.getSecondName() +
-                " | " + user.getAge() + " | " + user.getSalary() + " | " + user.getEmail() + " | " + user.getPlaceOfWork() + "\n";
+            return "user";
+        }
+        else {
 
-        FileOutputStream outputStream = new FileOutputStream("output.txt", true);
-        byte[] strToBytes = str.getBytes();
+            String str = user.getLastName() + " | " + user.getFirstName() + " | " + user.getSecondName() +
+                    " | " + user.getAge() + " | " + user.getSalary() + " | " + user.getEmail() + " | " + user.getPlaceOfWork() + "\n";
 
-        outputStream.write(strToBytes);
-        outputStream.close();
+            FileOutputStream outputStream = new FileOutputStream("output.txt", true);
+            byte[] strToBytes = str.getBytes();
 
-        return "success";
+            outputStream.write(strToBytes);
+            outputStream.close();
+
+            return "redirect:/user";
+        }
+
     }
 
 
