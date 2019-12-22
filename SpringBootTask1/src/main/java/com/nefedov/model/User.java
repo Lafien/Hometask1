@@ -1,4 +1,4 @@
-package main.java.nefedov.model;
+package com.nefedov.model;
 
 public class User {
     private String lastName;
@@ -8,6 +8,19 @@ public class User {
     private int salary;
     private String email;
     private String PlaceOfWork;
+
+    public User() {
+    }
+
+    public User(String lastName, String firstName, String secondName, int age, int salary, String email, String placeOfWork) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.age = age;
+        this.salary = salary;
+        this.email = email;
+        PlaceOfWork = placeOfWork;
+    }
 
     public String getLastName() {
         return lastName;
