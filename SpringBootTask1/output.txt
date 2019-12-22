@@ -1,20 +1,6 @@
-Chugunova | Kate | Evgenievna | 23 | 1000 | redberd@mail.ru | Netcracker
-Nefedov | Alexander | Dmitryevich | 22 | 1000 | lifaenka@list.ru | Netcracker
-Ivanov | Semen | Semenovich | 50 | 500 | ivanov@mail.ru | Magazin
-Semenov | Ivan | Sergeevich | 55 | 200 | asda@mail.ru | School
-new | new | new | 123 | 123 | new | new
-zxcv | zcxv | zcxv | 12 | 12 | xzcv | zcxv
-qwer | qwer |  | 12 | 21 | qwer | qwer
-qwer | qwer | qwer | 2 | 2 | qwer | qwer
-Zx | ZX | ZX | 2 | 15 | asd | asd
- |  |  | 0 | 0 |  | 
- | asd | asd | 1 | 1 | asd | asd
- | asd | asd | 123 | 12 | qdw | qwedg
-asd | ads | asd | 22 | 123 | sdasd | asdas
- | asd | asd | 12 | 123 | asd | asd
- | asd | asd | 123 | 123 | qsd | asd
-asd | asd | ads | 12 | 12 |  | asd
-fafa | asd | asd | 12 | 123 |  | qaasd
-asd | asd | asd | 12 | 124 | adgsd@list.ru | qeds
-asda | asd | asd | 120 | 12 | askdj@yandex.com | qwda
- | asd | asd | 12 | 12 | asdk@asd.tu | asdcka
+Chugunova Kate Evgenievna 23 1000 redberd@mail.ru Netcracker
+Nefedov Alexander Dmitryevich 22 1000 lifaenka@list.ru Netcracker
+Ivanov Semen Semenovich 50 500 ivanov@mail.ru Magazin
+Semenov Ivan Sergeevich 55 200 asda@mail.ru School
+asd asd asd 12 124 adgsd@list.ru qeds
+asda asd asd 120 12 askdj@yandex.com qwda

@@ -15,7 +15,10 @@
 <p th:text="'salary: ' + ${user.salary}"   />
 <p th:text="'email: ' + ${user.email}"   />
 <p th:text="'placeOfWork: ' + ${user.placeOfWork}"   />
-<a href="user"> Create new user</a>
+<p th:text="'time: ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"   />
+<span th:text="${#httpServletRequest.getHeader('User-Agent')}">Agent</span>
+<br/>
+<a href="search">Back</a>
 
 
 </form>

@@ -15,7 +15,6 @@ public class PlaceOfWorkValidator implements
 
     @Override
     public boolean isValid(String s, ConstraintValidatorContext constraintValidatorContext) {
-        System.out.println(!s.isEmpty());
         return !s.isEmpty();
     }
 }

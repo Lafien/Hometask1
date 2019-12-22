@@ -1,6 +1,5 @@
 package com.nefedov.annotation;
 
-import com.nefedov.validator.AgeValidator;
 import com.nefedov.validator.SalaryValidator;
 
 import javax.validation.Constraint;
@@ -14,8 +13,7 @@ import java.lang.annotation.Target;
 @Target( { ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface SalaryConstraint {
-    String message() default "Invalid salary (\n" +
-            "salary must be greater than 0)";
+    String message() default "Invalid salary (salary must be greater than 0)";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
