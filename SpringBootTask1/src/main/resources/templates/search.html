@@ -10,9 +10,17 @@
 <h2>Enter last name and first name</h2>
 <form action="#" th:action="@{/search}"th:object ="${user}" method="get">
 
-<p>Last Name: <input type="text" th:field = "*{lastName}"></p>
+<p>Last Name: <input type="text" th:field = "*{lastName}">
+    <td>
+        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">..</span>
+    </td>
+</p>
 
-<p>First Name: <input type="text" th:field = "*{firstName}"></p>
+<p>First Name: <input type="text" th:field = "*{firstName}">
+    <td>
+        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">..</span>
+    </td>
+</p>
 
     <p>
         <button type="submit" name="action" value="search">Search</button>

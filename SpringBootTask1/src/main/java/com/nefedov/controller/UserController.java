@@ -56,47 +56,50 @@ public class UserController {
     @RequestMapping(value="/search", method= RequestMethod.GET, params="action=search")
     public String search(User user, BindingResult bindingResult) throws IOException {
 
+        if(user.getLastName().isEmpty() || user.getFirstName().isEmpty()){
+            return "redirect:/search";
+        }
         LinkedList<ArrayList<String>> list = new LinkedList<ArrayList<String>>();
         FileInputStream fileInputStream = new FileInputStream("output.txt");
         BufferedReader in = new BufferedReader(new InputStreamReader(fileInputStream));
         String str = null;
         ArrayList<String> result = null;
+
         while ((str = in.readLine()) != null) {
-            String arr[] = str.split("\n");
+            String[] arr = str.split("\n");
             result = new ArrayList<String>(Arrays.asList(arr));
             list.addLast(result);
         }
 
-        System.out.println(user.getLastName() + " " + user.getFirstName());
-        String find ="";
-        for(int i =0; i < list.size(); i++){
-            if(list.get(i).toString().contains(user.getLastName()) && list.get(i).toString().contains(user.getFirstName())){
-                //System.out.println(list.get(i));
+        String find = "";
+
+        for (int i = 0; i < list.size(); i++) {
+
+            if (list.get(i).toString().contains(user.getLastName()) && list.get(i).toString().contains(user.getFirstName())) {
                 find = list.get(i).toString();
+                find = find.replaceAll("\\[", "");
+                find = find.replaceAll("\\]", "");
+                String[] subStr;
+                String delimeter = " ";
+                subStr = find.split(delimeter);
+
+                user.setSecondName(subStr[2]);
+                user.setAge(Integer.parseInt(subStr[3]));
+                user.setEmail(subStr[5]);
+                user.setSalary(Integer.parseInt(subStr[4]));
+
+                if (subStr.length >= 6) {
+                    String place = "";
+                    for (int j = 6; j < subStr.length; j++) {
+                        place += subStr[j] + " ";
+                    }
+                    user.setPlaceOfWork(place);
+                }
+                return "result";
             }
         }
-
-        find = find.replaceAll("\\[", "");
-        find = find.replaceAll("\\]", "");
-        String[] subStr;
-        String delimeter = " ";
-        subStr = find.split(delimeter);
-
-        for(int i =0; i < subStr.length; i++){
-            System.out.println(subStr[i]);
-        }
-
-        user.setSecondName(subStr[2]);
-        user.setAge(Integer.parseInt(subStr[3]));
-        user.setEmail(subStr[5]);
-        user.setPlaceOfWork(subStr[6]);
-        user.setSalary(Integer.parseInt(subStr[4]));
-
-        return "result";
+        return "unsuccessfulsearch";
     }
-
-
-
-
-
 }
+
+

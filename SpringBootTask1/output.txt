@@ -1,6 +1,8 @@
 Chugunova Kate Evgenievna 23 1000 redberd@mail.ru Netcracker
 Nefedov Alexander Dmitryevich 22 1000 lifaenka@list.ru Netcracker
 Ivanov Semen Semenovich 50 500 ivanov@mail.ru Magazin
+Pupkin Petr Ivanovich 22 2000 asga@yandex.ru School 58
 Semenov Ivan Sergeevich 55 200 asda@mail.ru School
-asd asd asd 12 124 adgsd@list.ru qeds
-asda asd asd 120 12 askdj@yandex.com qwda
+Петриенко Сергей Семенович 29 2000 petr@mail.ru Автосервис
+Иванов Петр Иванович 29 800 ivn@mail.ru Стройка
+Скиданов Максим Алексеевич 23 500 skid@mail.ru Spar

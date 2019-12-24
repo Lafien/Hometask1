@@ -8,15 +8,16 @@
 <body>
 
 <h1>Result</h1>
-<p th:text="'lastName: ' + ${user.lastName}"   />
-<p th:text="'firstName: ' + ${user.firstName}"   />
-<p th:text="'secondName: ' + ${user.secondName}"   />
-<p th:text="'age: ' + ${user.age}"   />
-<p th:text="'salary: ' + ${user.salary}"   />
-<p th:text="'email: ' + ${user.email}"   />
-<p th:text="'placeOfWork: ' + ${user.placeOfWork}"   />
-<p th:text="'time: ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"   />
+<p th:text="'Last name: ' + ${user.lastName}"   />
+<p th:text="'First name: ' + ${user.firstName}"   />
+<p th:text="'Second name: ' + ${user.secondName}"   />
+<p th:text="'Age: ' + ${user.age}"   />
+<p th:text="'Salary: ' + ${user.salary}"   />
+<p th:text="'Email: ' + ${user.email}"   />
+<p th:text="'Place of work: ' + ${user.placeOfWork}"   />
+<p th:text="'Time: ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"   />
 <span th:text="${#httpServletRequest.getHeader('User-Agent')}">Agent</span>
+<br/>
 <br/>
 <a href="search">Back</a>
 
