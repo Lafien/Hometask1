@@ -27,6 +27,10 @@ public class EmailController {
     @RequestMapping(value="/sendmessage", method= RequestMethod.POST, params="action=sendMessage")
     public String sendMessage(Email email){
 
+        if(email.getEmailFriend().isEmpty() || email.getTextMessage().isEmpty()){
+            return "redirect:/sendmessage";
+        }
+
         SimpleMailMessage message = new SimpleMailMessage();
 
         message.setTo(email.getEmailFriend());

@@ -7,7 +7,7 @@
 
 <body>
 <h1>Send message</h1>
-<h2>Enter friend email and your message text</h2>
+<h2>Enter friend email, message subject and your message text</h2>
 <form action="#" th:action="@{/sendmessage}"th:object ="${sendmessage}" method="post">
 
     <p>Friend email: <input type="text" th:field = "*{emailFriend}"></p>
@@ -18,7 +18,6 @@
 
     <p>
         <button type="submit" name="action" value="sendMessage">Send message</button>
-        <!--<input type="submit" value="Submit"/>-->
         <input type="reset" value="Reset"/>
     </p>
 
