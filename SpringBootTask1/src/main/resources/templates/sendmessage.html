@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Greeting form</title>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+</head>
+
+<body>
+<h1>Send message</h1>
+<h2>Enter friend email and your message text</h2>
+<form action="#" th:action="@{/sendmessage}"th:object ="${sendmessage}" method="post">
+
+    <p>Friend email: <input type="text" th:field = "*{emailFriend}"></p>
+
+    <p>Message subject: <input type="text" th:field = "*{messageSubject}"></p>
+
+    <p>Your text: <input type="text" th:field = "*{textMessage}"></p>
+
+    <p>
+        <button type="submit" name="action" value="sendMessage">Send message</button>
+        <!--<input type="submit" value="Submit"/>-->
+        <input type="reset" value="Reset"/>
+    </p>
+
+    <br/>
+    <a href="welcome">Back</a>
+
+</form>
+</body>
+
+</html>
