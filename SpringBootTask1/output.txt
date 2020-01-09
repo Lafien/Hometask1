@@ -6,3 +6,5 @@ Semenov Ivan Sergeevich 55 200 asda@mail.ru School
 Петриенко Сергей Семенович 29 2000 petr@mail.ru Автосервис
 Иванов Петр Иванович 29 800 ivn@mail.ru Стройка
 Скиданов Максим Алексеевич 23 500 skid@mail.ru Spar
+Какашка Какашка Какашка 22 1000 lifaenka@list.ru House
+Поивет Привет Поиань 20 1000 jfjdhd@mau.ru Ndhshd
