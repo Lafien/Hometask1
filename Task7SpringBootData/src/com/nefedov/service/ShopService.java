@@ -1,6 +1,7 @@
 package com.nefedov.service;
 
 import com.nefedov.entity.Book;
+import com.nefedov.entity.Buy;
 import com.nefedov.entity.Shop;
 import com.nefedov.repository.BooksRepository;
 import com.nefedov.repository.ShopRepository;
@@ -15,25 +16,40 @@ public class ShopService {
     @Autowired
     private ShopRepository shopRepository;
 
-    /*public List<Employee> findAll(){
-        return employeeRepository.findAll();
-    }
-
-    public Employee findById(int id){
-        Optional<Employee> optional = employeeRepository.findById(id);
-        return optional.orElse(new Employee());
-    }*/
-
-    /*public List<Employee> findByName(String name){
-        return employeeRepository.findByName(name);
-    }*/
-
-    /*public void save(Employee employee){
-        employeeRepository.save(employee);
-    }*/
-
     public List<Shop> retrieveByNameShop(String nameShop){
         return shopRepository.retrieveByNameShop(nameShop);
+    }
+
+    public void deleteById(int id){
+        shopRepository.deleteById(id);
+    }
+
+    public List<Shop> getAll(){
+        return shopRepository.getAll();
+    }
+
+    public void setSomething(String name, int id){
+        shopRepository.setSomething(name, id);
+    }
+
+    public void add(String name,String locations,int commission){
+        shopRepository.add(name, locations, commission);
+    }
+
+    public List<Shop> findById(int id){
+        return shopRepository.findById(id);
+    }
+
+    public void fullRewriting(int id, String name,String locations,int commission){
+        shopRepository.fullRewriting(id, name, locations, commission);
+    }
+
+    public List<String> getNameMagSormSov(){
+        return shopRepository.getNameMagSormSov();
+    }
+
+    public List<Object> getMagazineExceptAuvtoz(){
+        return shopRepository.getMagazineExceptAuvtoz();
     }
 
 }

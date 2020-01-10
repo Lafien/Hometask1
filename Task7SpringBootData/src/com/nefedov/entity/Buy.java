@@ -3,6 +3,7 @@ package com.nefedov.entity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "buy")
@@ -12,8 +13,9 @@ public class Buy {
     @Column(name = "id_number")
     private int id;
 
+
     @Column(name = "date_buy")
-    private String dateBuy;
+    private Date dateBuy;
 
     @Column(name = "seller")
     private int seller;
@@ -33,7 +35,7 @@ public class Buy {
     public Buy() {
     }
 
-    public Buy(String dateBuy, int seller, int buyer, int book, int amount, int summ) {
+    public Buy(Date dateBuy, int seller, int buyer, int book, int amount, int summ) {
         this.dateBuy = dateBuy;
         this.seller = seller;
         this.buyer = buyer;
@@ -50,11 +52,11 @@ public class Buy {
         this.id = id;
     }
 
-    public String getDateBuy() {
+    public Date getDateBuy() {
         return dateBuy;
     }
 
-    public void setDateBuy(String dateBuy) {
+    public void setDateBuy(Date dateBuy) {
         this.dateBuy = dateBuy;
     }
 

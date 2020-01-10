@@ -15,25 +15,48 @@ public class BuyerService {
     @Autowired
     private BuyerRepository buyerRepository;
 
-    /*public List<Employee> findAll(){
-        return employeeRepository.findAll();
-    }
-
-    public Employee findById(int id){
-        Optional<Employee> optional = employeeRepository.findById(id);
-        return optional.orElse(new Employee());
-    }*/
-
-    /*public List<Employee> findByName(String name){
-        return employeeRepository.findByName(name);
-    }*/
-
-    /*public void save(Employee employee){
-        employeeRepository.save(employee);
-    }*/
-
     public List<Buyer> retrieveBySurname(String surname){
         return buyerRepository.retrieveBySurname(surname);
+    }
+
+    public void deleteById(int id){
+        buyerRepository.deleteById(id);
+    }
+
+    public List<Buyer> getAll(){
+        return buyerRepository.getAll();
+    }
+
+    public void setSomething(String surname, int id){
+        buyerRepository.setSomething(surname, id);
+    }
+
+    public void add(String surname, String residence, int discount){
+        buyerRepository.add(surname, residence, discount);
+    }
+
+    public List<Buyer> findById(int id){
+        return buyerRepository.findById(id);
+    }
+
+    public void fullRewriting(int id, String surname, String residence, int discount){
+        buyerRepository.fullRewriting(id, surname, residence, discount);
+    }
+
+    public List<String> getAnyResidence(){
+        return buyerRepository.getAnyResidence();
+    }
+
+    public List<Buyer> getSurnameDiscount(){
+        return buyerRepository.getSurnameDiscount();
+    }
+
+    public List<Object> getSurnameAndMagazine(){
+        return buyerRepository.getSurnameAndMagazine();
+    }
+
+    public List<Object> getBuyerAfterMarch(){
+        return buyerRepository.getBuyerAfterMarch();
     }
 
 }

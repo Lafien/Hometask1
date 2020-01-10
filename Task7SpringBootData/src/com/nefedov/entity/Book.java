@@ -1,6 +1,7 @@
 package com.nefedov.entity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "books")
@@ -14,7 +15,7 @@ public class Book {
     private String name;
 
     @Column(name = "costs")
-    private int costs;
+    private BigDecimal costs;
 
     @Column(name = "warehouse")
     private String warehouse;
@@ -25,7 +26,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(String name, int costs, String warehouse, int quantity) {
+    public Book(String name, BigDecimal costs, String warehouse, int quantity) {
         this.name = name;
         this.costs = costs;
         this.warehouse = warehouse;
@@ -48,11 +49,11 @@ public class Book {
         this.name = name;
     }
 
-    public int getCosts() {
+    public BigDecimal getCosts() {
         return costs;
     }
 
-    public void setCosts(int costs) {
+    public void setCosts(BigDecimal costs) {
         this.costs = costs;
     }
 
